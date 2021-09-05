@@ -7,19 +7,42 @@ MoGuDing-Auto
 
 ## 项目简介
 
+WEB版本：[点击进入](http://www.lftools.ltd/) 
+
 蘑菇丁每日上下班打卡，支持多账户，指定地区，后续将添加日报周报等功能
+
+## WEB版展示
+WEB版基于Pear-Admin-Boot编写
+
+<img src="docs/IMG/web1.png" style="zoom:33%;" />
+<img src="docs/IMG/web2.png" style="zoom:33%;" />
+<img src="docs/IMG/web3.png" style="zoom:33%;" />
+<img src="docs/IMG/web4.png" style="zoom:33%;" />
+<img src="docs/IMG/web5.png" style="zoom:33%;" />
+<img src="docs/IMG/web6.png" style="zoom:33%;" />
+
+微信交流群:
+
+<img src="https://img14.360buyimg.com/ddimg/jfs/t1/204524/5/4225/177487/612f5d77Ec693fa91/431470d5d296dd52.jpg" style="zoom:33%;" />
+
+
 
 ## 项目功能
 
-***当前版本:  20210801***
+***当前版本:  20210826***
 
 1. 定时上下班自动打卡
 2. 支持指定地区
 3. 支持多用户
 4. 支持多种推送方式
+5. 支持自定义设备
 
 
 ## 更新日志
+### 2021-08-26:
+
+1. 自定义设备
+2. 修复死循环
 
 ### 2021-08-01:
 
@@ -65,6 +88,7 @@ MoGuDing-Auto
   {
     "phone": "你的手机号", # 账号
     "password": "你的密码", # 密码
+    "device": "Android", # 设备  Android或者iOS
     "token": "123", #抓包获取token，在请求头中为 authorization
     "country": "中国", # 国家
     "province": "江西省", # 省份
@@ -84,6 +108,7 @@ MoGuDing-Auto
   {
     "phone": "你的手机号", # 账号
     "password": "你的密码", # 密码
+    "device": "Android", # 设备  Android或者iOS
     "token": "", #抓包获取token，在请求头中为 authorization，不会抓包请留空，不要删除
     "country": "中国", # 国家
     "province": "江西省", # 省份
@@ -95,6 +120,7 @@ MoGuDing-Auto
   {
     "phone": "你的手机号", # 账号
     "password": "你的密码", # 密码
+    "device": "Android", # 设备  Android或者iOS
     "token": "123", #抓包获取token，在请求头中为 authorization
     "country": "中国", # 国家
     "province": "江西省", # 省份
