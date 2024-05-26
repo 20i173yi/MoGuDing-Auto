@@ -6,39 +6,46 @@ MoGuDing-Auto
 
 
 ## 项目简介
+蘑菇丁X工学云每日上下班打卡，支持多账户，指定地区，多种推送方式
 
-WEB版本：[点击进入](http://www.lftools.ltd/) 
 
-蘑菇丁每日上下班打卡，支持多账户，指定地区，后续将添加日报周报等功能
+WEB版本：[点击进入](https://auto.xn--lmqs60m.cc/)
 
-## WEB版展示
-WEB版基于Pear-Admin-Boot编写
+备用网址：[点击进入](http://auto.taskauto.me/)
 
-<img src="docs/IMG/web1.png" style="zoom:33%;" />
-<img src="docs/IMG/web2.png" style="zoom:33%;" />
-<img src="docs/IMG/web3.png" style="zoom:33%;" />
-<img src="docs/IMG/web4.png" style="zoom:33%;" />
-<img src="docs/IMG/web5.png" style="zoom:33%;" />
-<img src="docs/IMG/web6.png" style="zoom:33%;" />
+目前WEB版已支持工学云,蘑菇丁,习讯云,习讯宁夏,黔职通,校友邦,职校家园,实习备案,慧职教
+
+每日上下班打卡，日周月报，总结，健康上报，支持图片添加，支持多账户，指定地区，多种推送方式
+
+
+请不要使用本开源程序在服务器上跑(包括GitHub的Actions)！！！
+
+请不要使用本开源程序在服务器上跑(包括GitHub的Actions)！！！
+
+请不要使用本开源程序在服务器上跑(包括GitHub的Actions)！！！
 
 微信交流群:
 
-<img src="https://img14.360buyimg.com/ddimg/jfs/t1/201870/16/5638/173507/6138b1a1E39d27fb4/449af85e750378ce.jpg" style="zoom:33%;" />
-
-
+<img src="http://pay.zeee.me/res/images/wx.jpg" style="zoom:33%;" />
 
 ## 项目功能
 
-***当前版本:  20210826***
+***当前版本:  20210915***
 
 1. 定时上下班自动打卡
 2. 支持指定地区
 3. 支持多用户
 4. 支持多种推送方式
 5. 支持自定义设备
+6. 支持本地文件配置
 
 
 ## 更新日志
+### 2021-09-15:
+
+1. 支持本地文件配置
+2. 账号单独推送
+
 ### 2021-08-26:
 
 1. 自定义设备
@@ -74,12 +81,19 @@ WEB版基于Pear-Admin-Boot编写
 | TOUSER               | touser指定接收消息的成员  默认为“@all”                       | 非必填   |
 | AGENTID              | agentid企业应用的id                                          | 非必填   |
 | THUMB_MEDIA_ID       | 企业微信素材库图片id                                         | 非必填   |
-| AUTHOR               | 企业微信文章作者名字                                         | 非必填   |
+| DING_PUSH_TOKEN      | 钉钉机器人的WebHook(添加关键词“签到”)                         | 非必填|
+
 
 ***PERSONAL_INFORMATION***     变量填写例子：
 注意！这个必填的变量值为一个json形式:
 
 使用时请删除注释！！！
+
+使用时请删除注释！！！
+
+使用时请删除注释！！！
+
+如果使用是本地文件配置方式，请将下方配置填写到“information.json”文件中
 
 一个账户：
 
@@ -95,7 +109,19 @@ WEB版基于Pear-Admin-Boot编写
     "city": "萍乡市", # 城市  
     "address": "中国江西省萍乡市芦溪县东南边境", # 详细地址
     "latitude": "27.467943", # 纬度
-    "longitude": "114.17542" # 经度
+    "longitude": "114.17542", # 经度
+    "SERVERPUSHKEY": "", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "" ,# 企业微信素材库图片id
+    "DING_PUSH_TOKEN": "" # 钉钉机器人推送webhook
   }
   
 ]
@@ -115,7 +141,19 @@ WEB版基于Pear-Admin-Boot编写
     "city": "萍乡市", # 城市  
     "address": "中国江西省萍乡市芦溪县东南边境", # 详细地址
     "latitude": "27.467943", # 纬度
-    "longitude": "114.17542" # 经度
+    "longitude": "114.17542", # 经度
+    "SERVERPUSHKEY": "", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "" , # 企业微信素材库图片id
+    "DING_PUSH_TOKEN": "" # 钉钉
   },
   {
     "phone": "你的手机号", # 账号
@@ -127,7 +165,19 @@ WEB版基于Pear-Admin-Boot编写
     "city": "萍乡市", # 城市  
     "address": "中国江西省萍乡市芦溪县东南边境", # 详细地址
     "latitude": "27.467943", # 纬度
-    "longitude": "114.17542" # 经度
+    "longitude": "114.17542", # 经度
+     "SERVERPUSHKEY": "", # Server酱推送
+    "TG_BOT_TOKEN": "",  # Telegram推送服务Token
+    "TG_USER_ID": "", # Telegram推送服务UserId
+    "BARK": "", # bark消息推送服务,自行搜索; secrets可填;形如jfjqxDx3xxxxxxxxSaK的字符串
+    "PUSHPLUS": "", # PUSHPLUS消息推送Token
+    "ACCESSTOKEN": "", # 企业微信access_token
+    "CORPID": "", # 企业ID  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "CORPSECRET": "", # 应用的凭证密钥  （如果已经填写ACCESSTOKEN  则无需填写这个）
+    "TOUSER": "", # touser指定接收消息的成员  默认为全部
+    "AGENTID": "", # agentid企业应用的id
+    "THUMB_MEDIA_ID": "", # 企业微信素材库图片id
+    "DING_PUSH_TOKEN": "" # 钉钉
   }
   
 ]
@@ -182,3 +232,14 @@ WEB版基于Pear-Admin-Boot编写
 3. [配置消息通道](https://sct.ftqq.com/forward) ，选择方糖服务号，保存即可。
 4. 推送效果展示
    <img src="docs/IMG/ysxg1.jpg" style="zoom:33%;" />
+   
+   
+## WEB版展示
+WEB版基于Pear-Admin-Boot编写
+
+<img src="docs/IMG/web1.png" style="zoom:33%;" />
+<img src="docs/IMG/web2.png" style="zoom:33%;" />
+<img src="docs/IMG/web3.png" style="zoom:33%;" />
+<img src="docs/IMG/web4.png" style="zoom:33%;" />
+<img src="docs/IMG/web5.png" style="zoom:33%;" />
+<img src="docs/IMG/web6.png" style="zoom:33%;" />
